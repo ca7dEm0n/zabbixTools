@@ -1,0 +1,47 @@
+triggerids	|	string/array	|	Return only triggers with the given IDs.
+groupids	|	string/array	|	Return only triggers that belong to hosts from the given host groups.
+templateids	|	string/array	|	Return only triggers that belong to the given templates.
+hostids	|	string/array	|	Return only triggers that belong to the given hosts.
+itemids	|	string/array	|	Return only triggers that contain the given items.
+applicationids	|	string/array	|	Return only triggers that contain items from the given applications.
+functions	|	string/array	|	Return only triggers that use the given functions. 
+group	|	string	|	Return only triggers that belong to hosts from the host group with the given name.
+host	|	string	|	Return only triggers that belong to host with the given name.
+inherited	|	boolean	|	If set to true return only triggers inherited from a template.
+templated	|	boolean	|	If set to true return only triggers that belong to templates.
+monitored	|	flag	|	Return only enabled triggers that belong to monitored hosts and contain only enabled items.
+active	|	flag	|	Return only enabled triggers that belong to monitored hosts.
+maintenance	|	boolean	|	If set to true return only enabled triggers that belong to hosts in maintenance.
+withUnacknowledgedEvents	|	flag	|	Return only triggers that have unacknowledged events.
+withAcknowledgedEvents	|	flag	|	Return only triggers with all events acknowledged.
+withLastEventUnacknowledged	|	flag	|	Return only triggers with the last event unacknowledged.
+skipDependent	|	flag	|	Skip triggers in a problem state that are dependent on other triggers. Note that the other triggers are ignored if disabled, have disabled items or disabled item hosts.
+lastChangeSince	|	timestamp	|	Return only triggers that have changed their state after the given time.
+lastChangeTill	|	timestamp	|	Return only triggers that have changed their state before the given time.
+only_true	|	flag	|	Return only triggers that have recently been in a problem state.
+min_severity	|	integer	|	Return only triggers with severity greater or equal than the given severity.
+expandComment	|	flag	|	Expand macros in the trigger description.
+expandDescription	|	flag	|	Expand macros in the name of the trigger.
+expandExpression	|	flag	|	Expand functions and macros in the trigger expression.
+selectGroups	|	query	|	Return the host groups that the trigger belongs to in the groups property.
+selectHosts	|	query	|	Return the hosts that the trigger belongs to in the hosts property.
+selectItems	|	query	|	Return items contained by the trigger in the items property.
+selectFunctions	|	query	|	Return functions used in the trigger in the functions property. 
+selectDependencies	|	query	|	Return triggers that the trigger depends on in the dependencies property.
+selectDiscoveryRule	|	query	|	Return the low-level discovery rule that created the trigger.
+selectLastEvent	|	query	|	Return the last significant trigger event in the lastEvent property.
+selectTags	|	query	|	Return the trigger tags in tags property.
+filter	|	object	|	Return only those results that exactly match the given filter.
+limitSelects	|	integer	|	Limits the number of records returned by subselects. 
+sortfield	|	string/array	|	Sort the result by the given properties.
+countOutput	|	flag	|	These parameters being common for all getmethods are described in detail in the reference commentary page.
+editable	|	boolean	|	These parameters being common for all getmethods are described in detail in the reference commentary page.
+excludeSearch	|	flag	|	These parameters being common for all getmethods are described in detail in the reference commentary page.
+limit	|	integer	|	These parameters being common for all getmethods are described in detail in the reference commentary page.
+output	|	query	|	These parameters being common for all getmethods are described in detail in the reference commentary page.
+preservekeys	|	flag	|	These parameters being common for all getmethods are described in detail in the reference commentary page.
+search	|	object	|	These parameters being common for all getmethods are described in detail in the reference commentary page.
+searchByAny	|	boolean	|	These parameters being common for all getmethods are described in detail in the reference commentary page.
+searchWildcardsEnabled	|	boolean	|	These parameters being common for all getmethods are described in detail in the reference commentary page.
+sortorder	|	string/array	|	These parameters being common for all getmethods are described in detail in the reference commentary page.
+startSearch	|	flag	|	These parameters being common for all getmethods are described in detail in the reference commentary page.

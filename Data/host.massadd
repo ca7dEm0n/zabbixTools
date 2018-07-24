@@ -1,0 +1,5 @@
+hosts 	|	object/array	|	Hosts to be updated. 
+groups	|	object/array	|	Host groups to add to the given hosts. 
+interfaces	|	object/array	|	Host interfaces to be created for the given hosts.
+macros	|	object/array	|	User macros to be created for the given hosts.
+templates	|	object/array	|	Templates to link to the given hosts. 

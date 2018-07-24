@@ -1,0 +1,5 @@
+groups	|	object/array	|	Host groups to add the host to. 
+interfaces	|	object/array	|	Interfaces to be created for the host.
+templates	|	object/array	|	Templates to be linked to the host. 
+macros	|	object/array	|	User macros to be created for the host.
+inventory	|	object	|	Host inventory properties.

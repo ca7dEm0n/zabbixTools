@@ -1,0 +1,54 @@
+groupids	|	string/array	|	Return only hosts that belong to the given groups.
+applicationids	|	string/array	|	Return only hosts that have the given applications.
+dserviceids	|	string/array	|	Return only hosts that are related to the given discovered services.
+graphids	|	string/array	|	Return only hosts that have the given graphs.
+hostids	|	string/array	|	Return only hosts with the given host IDs.
+httptestids	|	string/array	|	Return only hosts that have the given web checks.
+interfaceids	|	string/array	|	Return only hosts that use the given interfaces.
+itemids	|	string/array	|	Return only hosts that have the given items.
+maintenanceids	|	string/array	|	Return only hosts that are affected by the given maintenances.
+monitored_hosts	|	flag	|	Return only monitored hosts.
+proxy_hosts	|	flag	|	Return only proxies.
+proxyids	|	string/array	|	Return only hosts that are monitored by the given proxies.
+templated_hosts	|	flag	|	Return both hosts and templates.
+templateids	|	string/array	|	Return only hosts that are linked to the given templates.
+triggerids	|	string/array	|	Return only hosts that have the given triggers.
+with_items	|	flag	|	Return only hosts that have items. 
+with_applications	|	flag	|	Return only hosts that have applications.
+with_graphs	|	flag	|	Return only hosts that have graphs.
+with_httptests	|	flag	|	Return only hosts that have web checks. 
+with_monitored_httptests	|	flag	|	Return only hosts that have enabled web checks.
+with_monitored_items	|	flag	|	Return only hosts that have enabled items. 
+with_monitored_triggers	|	flag	|	Return only hosts that have enabled triggers. All of the items used in the trigger must also be enabled.
+with_simple_graph_items	|	flag	|	Return only hosts that have items with numeric type of information.
+with_triggers	|	flag	|	Return only hosts that have triggers. 
+withInventory	|	flag	|	Return only hosts that have inventory data.
+selectGroups	|	query	|	Return the host groups that the host belongs to in the groups property.
+selectApplications	|	query	|	Return the applications from the host in the applications property. 
+selectDiscoveries	|	query	|	Return the low level discoveries from the host in the discoveries property. 
+selectDiscoveryRule	|	query	|	Return the LLD rule that created the host in the discoveryRule property.
+selectGraphs	|	query	|	Return the graphs from the host in the graphs property. 
+selectHostDiscovery	|	query	|	Return the host discovery object in the hostDiscoveryproperty. 
+selectHttpTests	|	query	|	Return the web scenarios from the host in the httpTestsproperty. 
+selectInterfaces	|	query	|	Return the host interfaces in the interfaces property. 
+selectInventory	|	query	|	Return the host inventory from the host in the inventory property.
+selectItems	|	query	|	Return the items from the host in the items property. 
+selectMacros	|	query	|	Return the macros from the host in the macros property.
+selectParentTemplates	|	query	|	Return the templates that the host is linked to in the parentTemplates property. 
+selectScreens	|	query	|	Return the screens from the host in the screensproperty. 
+selectTriggers	|	query	|	Return the triggers from the host in the triggersproperty.
+filter	|	object	|	Return only those results that exactly match the given filter.
+limitSelects	|	integer	|	Limits the number of records returned by subselects. 
+search	|	object	|	Return results that match the given wildcard search.
+searchInventory	|	object	|	Return only hosts that have inventory data matching the given wildcard search.
+sortfield	|	string/array	|	Sort the result by the given properties. 
+countOutput	|	flag	|	These parameters being common for all get methods are described in detail in the reference commentary.
+editable	|	boolean	|	These parameters being common for all get methods are described in detail in the reference commentary.
+excludeSearch	|	flag	|	These parameters being common for all get methods are described in detail in the reference commentary.
+limit	|	integer	|	These parameters being common for all get methods are described in detail in the reference commentary.
+output	|	query	|	These parameters being common for all get methods are described in detail in the reference commentary.
+preservekeys	|	flag	|	These parameters being common for all get methods are described in detail in the reference commentary.
+searchByAny	|	boolean	|	These parameters being common for all get methods are described in detail in the reference commentary.
+searchWildcardsEnabled	|	boolean	|	These parameters being common for all get methods are described in detail in the reference commentary.
+sortorder	|	string/array	|	These parameters being common for all get methods are described in detail in the reference commentary.
+startSearch	|	flag	|	These parameters being common for all get methods are described in detail in the reference commentary.
