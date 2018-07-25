@@ -1,0 +1,26 @@
+id	|	string	|	ID of the history entry.
+clock	|	timestamp	|	Time when that value was received.
+itemid	|	string	|	ID of the related item.
+ns	|	integer	|	Nanoseconds when the value was received.
+value	|	float	|	Received value.
+logeventid	|	integer	|	Windows event log entry ID.
+severity	|	integer	|	Windows event log entry level.
+source	|	string	|	Windows event log entry source.
+timestamp	|	timestamp	|	Windows event log entry time.
+history	|	integer	|	History object types to return. 
+hostids	|	string/array	|	Return only history from the given hosts.
+itemids	|	string/array	|	Return only history from the given items.
+time_from	|	timestamp	|	Return only values that have been received after or at the given time.
+time_till	|	timestamp	|	Return only values that have been received before or at the given time.
+sortfield	|	string/array	|	Sort the result by the given properties. 
+countOutput	|	flag	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+editable	|	boolean	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+excludeSearch	|	flag	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+filter	|	object	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+limit	|	integer	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+output	|	query	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+search	|	object	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+searchByAny	|	boolean	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+searchWildcardsEnabled	|	boolean	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+sortorder	|	string/array	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+startSearch	|	flag	|	These parameters being common for all get methods are described in detail in the reference commentary page.

@@ -1,0 +1,6 @@
+hostids 	|	string/array	|	IDs of the hosts to be updated.
+groupids	|	string/array	|	Host groups to remove the given hosts from.
+interfaces	|	object/array	|	Host interfaces to remove from the given hosts. 
+macros	|	string/array	|	User macros to delete from the given hosts.
+templateids	|	string/array	|	Templates to unlink from the given hosts.
+templateids_clear	|	string/array	|	Templates to unlink and clear from the given hosts.

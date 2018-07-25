@@ -1,0 +1,70 @@
+actionid	|	string	|	(readonly) ID of the action.
+esc_period 	|	integer	|	Default operation step duration. Must be greater than 60 seconds.
+eventsource 	|	integer	|	(constant) Type of events that the action will handle. 
+name 	|	string	|	Name of the action.
+def_longdata	|	string	|	Problem message text.
+def_shortdata	|	string	|	Problem message subject.
+r_longdata	|	string	|	Recovery message text.
+r_shortdata	|	string	|	Recovery message subject.
+status	|	integer	|	Whether the action is enabled or disabled. 
+maintenance_mode	|	integer	|	Whether to pause escalation during maintenance periods or not.
+operationid	|	string	|	(readonly) ID of the action operation.
+operationtype	|	integer	|	Type of operation.
+actionid	|	string	|	ID of the action that the operation belongs to.
+esc_period	|	integer	|	Duration of an escalation step in seconds. Must be greater than 60 seconds. If set to 0, the default action escalation period will be used. 
+esc_step_from	|	integer	|	Step to start escalation from. 
+esc_step_to	|	integer	|	Step to end escalation at. 
+evaltype	|	integer	|	Operation condition evaluation method. 
+opcommand	|	object	|	Object containing the data about the command run by the operation. 
+opcommand_grp	|	array	|	Host groups to run remote commands on. 
+opcommand_hst	|	array	|	Host to run remote commands on. 
+opconditions	|	array	|	Operation conditions used for trigger actions. 
+opgroup	|	array	|	Host groups to add hosts to. 
+opmessage	|	object	|	Object containing the data about the message sent by the operation. 
+opmessage_grp	|	array	|	User groups to send messages to. 
+opmessage_usr	|	array	|	Users to send messages to. 
+optemplate	|	array	|	Templates to link the hosts to to. 
+opinventory	|	object	|	Inventory mode set host to. 
+operationid	|	string	|	(readonly) ID of the operation.
+command	|	string	|	Command to run. Required when type IN (0,1,2,3).
+type 	|	integer	|	Type of operation command. 
+authtype	|	integer	|	Authentication method used for SSH commands. 
+execute_on	|	integer	|	Target on which the custom script operation command will be executed. 
+password	|	string	|	Password used for SSH commands with password authentication and Telnet commands.
+port	|	string	|	Port number used for SSH and Telnet commands.
+privatekey	|	string	|	Name of the private key file used for SSH commands with public key authentication. 
+publickey	|	string	|	Name of the public key file used for SSH commands with public key authentication. 
+scriptid	|	string	|	ID of the script used for global script commands. 
+username	|	string	|	User name used for authentication. 
+operationid	|	string	|	(readonly) ID of the action operation.
+default_msg	|	integer	|	Whether to use the default action message text and subject. 
+mediatypeid	|	string	|	ID of the media type that will be used to send the message.
+message	|	string	|	Operation message text.
+subject	|	string	|	Operation message subject.
+opconditionid	|	string	|	(readonly) ID of the action operation condition
+conditiontype 	|	integer	|	Type of condition. 
+value 	|	string	|	Value to compare with.
+operationid	|	string	|	(readonly) ID of the operation.
+operator	|	integer	|	Condition operator.
+operationid	|	string	|	(readonly) ID of the action operation.
+operationtype 	|	integer	|	Type of operation. 
+actionid	|	string	|	ID of the action that the recovery operation belongs to.
+opcommand	|	object	|	Object containing the data about the command run by the recovery operation. 
+opcommand_grp	|	array	|	Host groups to run remote commands on. 
+opcommand_hst	|	array	|	Host to run remote commands on. 
+opmessage	|	object	|	Object containing the data about the message sent by the recovery operation. 
+opmessage_grp	|	array	|	User groups to send messages to. 
+opmessage_usr	|	array	|	Users to send messages to. 
+conditions 	|	array	|	Set of filter conditions to use for filtering results.
+evaltype 	|	integer	|	Filter condition evaluation method. 
+eval_formula	|	string	|	(readonly) Generated expression that will be used for evaluating filter conditions. The expression contains IDs that reference specific filter conditions by its formulaid. The value of eval_formulais equal to the value of formula for filters with a custom expression.
+formula	|	string	|	User-defined expression to be used for evaluating conditions of filters with a custom expression. The expression must contain IDs that reference specific filter conditions by its formulaid. The IDs used in the expression must exactly match the ones defined in the filter conditions: no condition can remain unused or omitted.
+conditionid	|	string	|	(readonly) ID of the action condition.
+conditiontype	|	integer	|	Type of condition. 
+value 	|	string	|	Value to compare with.
+value2	|	string	|	Secondary value to compare with. Requried for trigger actions when condition type is 26.
+actionid	|	string	|	(readonly) ID of the action that the condition belongs to.
+formulaid	|	string	|	Arbitrary unique ID that is used to reference the condition from a custom expression. Can only contain capital-case letters. The ID must be defined by the user when modifying filter conditions, but will be generated anew when requesting them afterward.
+operator	|	integer	|	Condition operator. 
+recovery_operations	|	array	|	Action operations to replace existing operations.
+operations	|	array	|	Action recovery operations to replace existing recovery operations.

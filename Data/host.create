@@ -1,5 +1,43 @@
-groups	|	object/array	|	Host groups to add the host to. 
-interfaces	|	object/array	|	Interfaces to be created for the host.
+hostid	|	string	|	(readonly) ID of the host.
+host 	|	string	|	Technical name of the host.
+available	|	integer	|	(readonly) Availability of Zabbix agent. 
+description	|	text	|	Description of the host.
+disable_until	|	timestamp	|	(readonly) The next polling time of an unavailable Zabbix agent.
+error	|	string	|	(readonly) Error text if Zabbix agent is unavailable.
+errors_from	|	timestamp	|	(readonly) Time when Zabbix agent became unavailable.
+flags	|	integer	|	(readonly) Origin of the host. 
+inventory_mode	|	integer	|	Host inventory population mode. 
+ipmi_authtype	|	integer	|	IPMI authentication algorithm. 
+ipmi_available	|	integer	|	(readonly) Availability of IPMI agent. 
+ipmi_disable_until	|	timestamp	|	(readonly) The next polling time of an unavailable IPMI agent.
+ipmi_error	|	string	|	(readonly) Error text if IPMI agent is unavailable.
+ipmi_errors_from	|	timestamp	|	(readonly) Time when IPMI agent became unavailable.
+ipmi_password	|	string	|	IPMI password.
+ipmi_privilege	|	integer	|	IPMI privilege level. 
+ipmi_username	|	string	|	IPMI username.
+jmx_available	|	integer	|	(readonly) Availability of JMX agent. 
+jmx_disable_until	|	timestamp	|	(readonly) The next polling time of an unavailable JMX agent.
+jmx_error	|	string	|	(readonly) Error text if JMX agent is unavailable.
+jmx_errors_from	|	timestamp	|	(readonly) Time when JMX agent became unavailable.
+maintenance_from	|	timestamp	|	(readonly) Starting time of the effective maintenance.
+maintenance_status	|	integer	|	(readonly) Effective maintenance status. 
+maintenance_type	|	integer	|	(readonly) Effective maintenance type. 
+maintenanceid	|	string	|	(readonly) ID of the maintenance that is currently in effect on the host.
+name	|	string	|	Visible name of the host. 
+proxy_hostid	|	string	|	ID of the proxy that is used to monitor the host.
+snmp_available	|	integer	|	(readonly) Availability of SNMP agent. 
+snmp_disable_until	|	timestamp	|	(readonly) The next polling time of an unavailable SNMP agent.
+snmp_error	|	string	|	(readonly) Error text if SNMP agent is unavailable.
+snmp_errors_from	|	timestamp	|	(readonly) Time when SNMP agent became unavailable.
+status	|	integer	|	Status and function of the host. 
+tls_connect	|	integer	|	Connections to host. 
+tls_accept	|	integer	|	Connections from host. 
+tls_issuer	|	string	|	Certificate issuer.
+tls_subject	|	string	|	Certificate subject.
+tls_psk_identity	|	string	|	PSK identity. Required if either tls_connect or tls_accept has PSK enabled.
+tls_psk	|	string	|	The preshared key, at least 32 hex digits. Required if either tls_connect or tls_accept has PSK enabled.
+groups 	|	object/array	|	Host groups to add the host to. 
+interfaces 	|	object/array	|	Interfaces to be created for the host.
 templates	|	object/array	|	Templates to be linked to the host. 
 macros	|	object/array	|	User macros to be created for the host.
 inventory	|	object	|	Host inventory properties.

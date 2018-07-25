@@ -1,0 +1,24 @@
+applicationids	|	string/array	|	Return only applications with the given IDs.
+groupids	|	string/array	|	Return only applications that belong to hosts from the given host groups.
+hostids	|	string/array	|	Return only applications that belong to the given hosts.
+inherited	|	boolean	|	If set to true return only applications inherited from a template.
+itemids	|	string/array	|	Return only applications that contain the given items.
+templated	|	boolean	|	If set to true return only applications that belong to templates.
+templateids	|	string/array	|	Return only applications that belong to the given templates.
+selectHost	|	query	|	Return the host that the application belongs to in the host property.
+selectItems	|	query	|	Return the items contained in the application in the items property.
+selectDiscoveryRule	|	query	|	Return the LLD rule that created the application in the discoveryRule property.
+selectApplicationDiscovery	|	query	|	Return the application discovery object in the applicationDiscovery property.
+sortfield	|	string/array	|	Sort the result by the given properties. 
+countOutput	|	flag	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+editable	|	boolean	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+excludeSearch	|	flag	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+filter	|	object	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+limit	|	integer	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+output	|	query	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+preservekeys	|	flag	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+search	|	object	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+searchByAny	|	boolean	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+searchWildcardsEnabled	|	boolean	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+sortorder	|	string/array	|	These parameters being common for all get methods are described in detail in the reference commentary page.
+startSearch	|	flag	|	These parameters being common for all get methods are described in detail in the reference commentary page.

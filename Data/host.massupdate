@@ -1,0 +1,8 @@
+hosts 	|	object/array	|	Hosts to be updated. 
+groups	|	object/array	|	Host groups to replace the current host groups the hosts belong to. 
+interfaces	|	object/array	|	Host interfaces to replace the current host interfaces on the given hosts.
+inventory	|	object	|	Host inventory properties. 
+inventory_mode	|	integer	|	Host inventory population mode. 
+macros	|	object/array	|	User macros to replace the current user macros on the given hosts.
+templates	|	object/array	|	Templates to replace the currently linked templates on the given hosts. 
+templates_clear	|	object/array	|	Templates to unlink and clear from the given hosts. 

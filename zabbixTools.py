@@ -57,7 +57,8 @@ class Zabbix:
                     "params": data(*args, **kw),
                     "id": 1,
                 }
-                D['auth'] = self.AUTH
+                if 'apiinfo.version' not in method:
+                    D['auth'] = self.AUTH
                 Dict = json.dumps(D)
                 Post = self.post(Dict)
                 if 'error' in Post:
@@ -69,6 +70,13 @@ class Zabbix:
         return _Data
 
     def baseFunction(self, post_dict, functions=None):
+        @self.base(post_dict['function'])
+        def _exe(d):
+            return d
+
+        # 如果传入的参数中有带'params' 直接返回
+        if "params" in post_dict.keys():
+            postData = post_dict['params'].split(',')
 
         # 对传进来的字典进行扫描，如果是object对象，则把该值的参数组合成字典
         if functions:
@@ -81,10 +89,6 @@ class Zabbix:
         for _ in post_dict.keys():
             if "[" not in post_dict[_]:
                 post_dict[_] = _str2List(post_dict[_])
-
-        @self.base(post_dict['function'])
-        def _exe(d):
-            return d
 
         response = _exe(post_dict)
         return response
@@ -113,6 +117,16 @@ def value2Dict(d, k):
 def _readDataFile(file):
     file_list = []
     file_name = os.path.split(file)[-1]
+    # 空文件为params类型
+    if not os.path.getsize(file):
+        file_list.append({
+            "Parameter": "params",
+            "Type": "params",
+            "Description": "Params type.",
+            "Function": file_name
+        })
+        return file_list
+
     with open(file) as f:
         for i in f.read().split('\n'):
             x = [_.strip('\t') for _ in i.split('|')]

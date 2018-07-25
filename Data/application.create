@@ -1,0 +1,5 @@
+applicationid	|	string	|	(readonly) ID of the application.
+hostid 	|	string	|	ID of the host that the application belongs to. 
+name	|	string	|	Name of the application
+flags	|	integer	|	(readonly) Origin of the application. 
+templateids	|	array	|	(readonly) IDs of the parent template applications.

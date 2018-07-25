@@ -1,0 +1,24 @@
+actionids	|	string/array	|	Return only actions with the given IDs.
+groupids	|	string/array	|	Return only actions that use the given host groups in action conditions.
+hostids	|	string/array	|	Return only actions that use the given hosts in action conditions.
+triggerids	|	string/array	|	Return only actions that use the given triggers in action conditions.
+mediatypeids	|	string/array	|	Return only actions that use the given media types to send messages.
+usrgrpids	|	string/array	|	Return only actions that are configured to send messages to the given user groups.
+userids	|	string/array	|	Return only actions that are configured to send messages to the given users.
+scriptids	|	string/array	|	Return only actions that are configured to run the given scripts.
+selectFilter	|	query	|	Returns the action filter in the filter property.
+selectOperations	|	query	|	Return action operations in the operations property.
+selectRecoveryOperations	|	query	|	Return action recovery operations in the recoveryOperations property.
+sortfield	|	string/array	|	Sort the result by the given properties. 
+countOutput	|	flag	|	These parameters being common for all get methods are described in the reference commentary.
+editable	|	boolean	|	These parameters being common for all get methods are described in the reference commentary.
+excludeSearch	|	flag	|	These parameters being common for all get methods are described in the reference commentary.
+filter	|	object	|	These parameters being common for all get methods are described in the reference commentary.
+limit	|	integer	|	These parameters being common for all get methods are described in the reference commentary.
+output	|	query	|	These parameters being common for all get methods are described in the reference commentary.
+preservekeys	|	flag	|	These parameters being common for all get methods are described in the reference commentary.
+search	|	object	|	These parameters being common for all get methods are described in the reference commentary.
+searchByAny	|	boolean	|	These parameters being common for all get methods are described in the reference commentary.
+searchWildcardsEnabled	|	boolean	|	These parameters being common for all get methods are described in the reference commentary.
+sortorder	|	string/array	|	These parameters being common for all get methods are described in the reference commentary.
+startSearch	|	flag	|	These parameters being common for all get methods are described in the reference commentary.
