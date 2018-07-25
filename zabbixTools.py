@@ -78,17 +78,33 @@ class Zabbix:
         if "params" in post_dict.keys():
             postData = post_dict['params'].split(',')
 
-        # 对传进来的字典进行扫描，如果是object对象，则把该值的参数组合成字典
+        # 进行转换，除了包含'['外，其余出现逗号转为列表对象
+        for _ in post_dict.keys():
+            if isinstance(post_dict[_],list) and len(post_dict[_]) == 1:
+                if "[" not in post_dict[_]:
+                    post_dict[_] = _str2List(post_dict[_])
+
+
+        del_key_list = []
+        # 对传进来的字典进行扫描  
         if functions:
             for _ in list(post_dict.keys()):
                 if _ in functions.keys():
-                    if "object" in functions[_]['Type']:
+                    
+                    # 如果是object对象,则把该值的参数组合成字典
+                    if functions[_]['Type'] == "object":
                         value2Dict(post_dict, _)
 
-        # 进行转换，除了包含'['外，其余出现逗号转为列表对象
-        for _ in post_dict.keys():
-            if "[" not in post_dict[_]:
-                post_dict[_] = _str2List(post_dict[_])
+                    # 如果是object/array对象,则...
+                    if functions[_]['Type'] == "object/array":
+                        for x in post_dict[_]:
+                            del_key_list.append(x)
+                        new_list = value2Array(post_dict,_)
+                        post_dict[_] = new_list
+
+        for i in del_key_list:
+           if i in post_dict.keys():
+               del post_dict[i]
 
         response = _exe(post_dict)
         return response
@@ -98,19 +114,45 @@ def _str2List(text):
     """
     包含逗号的文本进行转换
     """
+
+    if isinstance(text,list):
+        if ',' in text[0]:
+            text = text[0].split(',')
+        return text
     text = text.split(',') if ',' in text else text
     return text
 
 
 def value2Dict(d, k):
     """
-    将外面的参数放进字典
+    将外面的参数放进字典,针对object对象
     """
     if d.get(k, ''):
-        for i in d[k].split(','):
+        k_list = d[k] if isinstance(d[k],list) else d[k].split(',')
+        for i in k_list:
             d[k] = {}
             d[k][i] = _str2List(d[i])
             del d[i]
+
+def value2Array(d, k):
+    """
+    将外面的参数放进字典,针对object/array对象
+    """
+
+    if d.get(k,''):
+        k_list  = d[k] if isinstance(d[k],list) else d[k].split(',')
+        len_max = max([ len(d[_]) for _ in k_list if _ in d.keys()])
+        new_list = []
+        for _ in range(0,len_max):
+            i_dict = { i:"" for i in k_list if k_list}
+            for k in k_list:
+                if len(d[k]) > _:
+                    i_dict[k] = d[k][_]
+                else:
+                    del i_dict[k]
+
+            new_list.append(i_dict)
+        return new_list
 
 
 # 解析单个数据文件
@@ -198,6 +240,7 @@ if __name__ == '__main__':
         item = base_modes_dict[arg]
         parser.add_argument(
             "--%s" % arg,
+            action='append',
             help="%s Can be used: (%s)" % (item['Description'], ','.join(
                 item['Functions'])))
     args = parser.parse_args()
@@ -227,7 +270,6 @@ if __name__ == '__main__':
     if args.function in base_modes_list:
         zabbix.URL = ZBX_API
         zabbix.login(LOGIN_DICT)
-
         # 获取所有参数
         arg_dict = vars(parser.parse_args())
 

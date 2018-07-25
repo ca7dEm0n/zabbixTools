@@ -37,6 +37,7 @@ tls_subject	|	string	|	Certificate subject.
 tls_psk_identity	|	string	|	PSK identity. Required if either tls_connect or tls_accept has PSK enabled.
 tls_psk	|	string	|	The preshared key, at least 32 hex digits. Required if either tls_connect or tls_accept has PSK enabled.
 groups 	|	object/array	|	Host groups to add the host to. 
+groupid 	|	string	|	Host groupid to add the host to. 
 interfaces 	|	object/array	|	Interfaces to be created for the host.
 templates	|	object/array	|	Templates to be linked to the host. 
 macros	|	object/array	|	User macros to be created for the host.
