@@ -1,6 +1,7 @@
 # zabbixTools
 
 Zabbix`API`命令行工具
+
 > 依赖`Data`目录下的数据文件，因为懒得写爬虫，用excle处理也行.
 
 ```
@@ -10,6 +11,11 @@ groupids	|	string/array	|	Return only hosts that belong to the given groups.
 # 对应官网API文档列表，自行参照API
 # https://www.zabbix.com/documentation/3.4/manual/api
 ```
+
+**功能**
+- 支持命令行下一些简单的`zabbix`操作.
+- 支持读取`excel`文件批量操作.
+- 便于其他框架引入.
 
 ### 简单使用
 
@@ -53,3 +59,18 @@ groupids	|	string/array	|	Return only hosts that belong to the given groups.
 **其他方法支持**
 	在`Data`目录下新增以方法名命名的数据文件.
 
+**自定义开发**
+
+> 在面对一些复杂的应用场景，非常多的参数以及繁琐步骤会令你痛苦不堪，可选择自定义开发
+
+效果演示
+
+> 以快速创建`HTTP站点监控`为例（见：`demo.py`）
+```
+> python demo.py  createHttp  --name "asd" --step_no 1 --step_url "www.baidu.com" --step_name "asd"
+
+{'hostid': '10254', 'name': 'asd', 'agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.104 Safari/537.36', 'delay': '60', 'status': '0', 'applicationid': '1058', 'steps': [{'name': 'asd', 'no': '1', 'url': 'www.baidu.com', 'follow_redirects': '0', 'timeout': '60'}]}
+```
+
+
+> 自用脚本，较为简单草率，欢迎各路大神指点，万分感激！
